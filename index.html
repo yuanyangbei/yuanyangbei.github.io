@@ -12,6 +12,7 @@
             padding: 0;
             margin: 0;
             scrollbar-width: none;
+            overflow: hidden;
         }
         ::-webkit-scrollbar {
           display: none; /* Chrome Safari */
@@ -82,9 +83,22 @@
             background-color: #e2e1e4;
             cursor: pointer;
         }
+        #text {
+            width: 85vw;
+            position: relative;
+            margin: 5vh auto;
+            background-color: rgb(199, 199, 199, .6);
+            border-radius: 1em;
+            padding: 1em 5vw 1em 5vw;
+            font-size: 22px;
+            color: #fbda41;
+            line-height: 1.5em;
+            letter-spacing: 3px;
+            text-align: center;
+        }
         @media screen and (max-width: 640px) {
             #bm {
-                top: 60vh;
+                top: 80vh;
                 width: 60vw;
                 margin-left: -30vw;
             }
@@ -97,6 +111,9 @@
             <video name="medio" autoplay muted controls  loop id="v">
                 <source src="https://lvren.oss-cn-beijing.aliyuncs.com/welcome.mp4"/>
             </video>
+        </div>
+        <div id="text">
+            欢迎来到魁拔兴趣社区“元泱杯”特别活动频道，点击下方按钮并提交正确信息参与报名，进入正式答题群。
         </div>
         <div id="bm" onclick="show();">点击报名</div>
     </div>
