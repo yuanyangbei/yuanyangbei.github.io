@@ -43,15 +43,12 @@
             text-align: center;
             color: gray;
             letter-spacing: 5px;
-            transition: all 1s;
+            transition: 1s;
             cursor: pointer;
         }
         #bm:hover {
-            background-color: #ff0000;
-            transition: all 1s;
-            font-weight: 900;
-            cursor: pointer;
-            color: #ffffff;
+            background-color: #fbda41;
+            color: black;
         }
         #table {
             width: 90vw;
@@ -69,20 +66,20 @@
             position: relative;
             overflow: auto;
         }
+        #f > iframe {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
         #back {
             width: 100%;
             height: 5%;
-            padding: auto;
             position: relative;
+            padding-top: 0.5em;
             text-align: center;
-            transition: all 1s;
             letter-spacing: 1em;
             background-color: #e2e1e4;
-        }
-        #back:hover {
-            transition: all 1s;
-            background-color: #e2e1e4;
-            
+            cursor: pointer;
         }
         @media screen and (max-width: 640px) {
             #bm {
@@ -95,33 +92,33 @@
 </head>
 <body scroll="no">
     <div id="bg">
-        <div>
+        <div id="mp">
             <video name="medio" autoplay muted controls  loop id="v">
-                <source src="https://upos-sz-mirrorhw.bilivideo.com/upgcxcode/63/43/292534363/292534363-1-208.mp4?e=ig8euxZM2rNcNbhj7bdVhwdlhzTjhwdVhoNvNC8BqJIzNbfq9rVEuxTEnE8L5F6VnEsSTx0vkX8fqJeYTj_lta53NCM=&uipk=5&nbs=1&deadline=1612530486&gen=playurl&os=hwbv&oi=978800370&trid=1a6c130cc39d46739ac83213ef725a66T&platform=html5&upsig=8ddd11141dd97d3b24aa2e652df176b8&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,platform&mid=524602686&orderid=0,1&logo=80000000"/>
+                <source src="https://upos-sz-mirrorhw.bilivideo.com/upgcxcode/63/43/292534363/292534363-1-208.mp4?e=ig8euxZM2rNcNbhj7bdVhwdlhzTjhwdVhoNvNC8BqJIzNbfq9rVEuxTEnE8L5F6VnEsSTx0vkX8fqJeYTj_lta53NCM=&uipk=5&nbs=1&deadline=1612534997&gen=playurl&os=hwbv&oi=978800370&trid=3478580a507b404d843fae71e79139b5T&platform=html5&upsig=1b5b6c0d6d995169e7beb46be6f172d9&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,platform&mid=524602686&orderid=0,1&logo=80000000"/>
             </video>
         </div>
         <div id="bm" onclick="show();">点击报名</div>
     </div>
     <div id="table">
-        <div id="f">
-            <iframe src='https://www.wjx.top/vj/wu9sUvb.aspx?width=760&source=iframe&s=t' style="width:100%; height: 800px;" frameborder='0' style='overflow:auto'></iframe>
-        </div>
+        <div id="f"><iframe src='https://www.wjx.top/vj/wu9sUvb.aspx?width=760&source=iframe&s=t' style="width:100%; height: 800px;" frameborder='0' style='overflow:auto'></iframe></div>
         <div id="back" onclick="hiden();">收起此表</div>
     </div>
 
     <script>
+        var video = document.getElementById("v");
         function show() {
             document.getElementById("table").style.top = "5vh";
-            document.getElementById("bg").style = "visibility: hidden;";
+            video.pause();
+            document.getElementById("mp").style.display = "none";
         }
         function hiden() {
             document.getElementById("table").style.top = "-90vh";
-            document.getElementById("bg").style = "visibility: inherit;";
+            video.play();
+            document.getElementById("mp").style.display = "inline";
         }
-        var video = document.getElementById("v");
         window.onload = function() {
             setTimeout("video.muted = false",5500);
-            video.play();       
+            video.play();
         }
     </script>
 </body>
