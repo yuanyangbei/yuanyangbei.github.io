@@ -112,9 +112,11 @@
     <script>
         function show() {
             document.getElementById("table").style.top = "5vh";
+            document.getElementById("bg").style = "visibility: hidden;";
         }
         function hiden() {
             document.getElementById("table").style.top = "-90vh";
+            document.getElementById("bg").style = "visibility: inherit;";
         }
         var video = document.getElementById("v");
         window.onload = function() {
