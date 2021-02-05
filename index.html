@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二届魁拔知识竞赛报名</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            scrollbar-width: none;
+        }
+        ::-webkit-scrollbar {
+          display: none; /* Chrome Safari */
+        }
+        #bg {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            background-color: rgb(161,38,53);
+        }
+        #bg video {
+            width: 100vw;
+            height: auto;
+            left: 5vw;
+            margin: 0 auto;
+        }
+        #bm {
+            width: 150px;
+            margin-left: -75px;
+            position: absolute;
+            top: 88%;
+            left: 50%;
+            border-radius: 20px;
+            background-color: #e2d849;
+            font-size: 20px;
+            line-height: 50px;
+            text-align: center;
+            color: gray;
+            letter-spacing: 5px;
+            transition: 1s;
+            cursor: pointer;
+        }
+        #bm:hover {
+            background-color: #fbda41;
+            color: black;
+        }
+        #table {
+            width: 90vw;
+            height: 80vh;
+            position: relative;
+            top: -90vh;
+            margin: 0 auto;
+            transition: 1s;
+            background-color: whitesmoke;
+            border: 1px solid gray;
+        }
+        #f {
+            width: 100%;
+            height: 95%;
+            position: relative;
+            overflow: auto;
+        }
+        #back {
+            width: 100%;
+            height: 5%;
+            position: relative;
+            text-align: center;
+            letter-spacing: 1em;
+            background-color: #e2e1e4;
+        }
+        @media screen and (max-width: 640px) {
+            #bm {
+                top: 60vh;
+                width: 60vw;
+                margin-left: -30vw;
+            }
+        }
+    </style>
+</head>
+<body scroll="no">
+    <div id="bg">
+        <div>
+            <video name="medio" autoplay muted controls  loop id="v">
+                <source src="https://upos-sz-mirrorhw.bilivideo.com/upgcxcode/63/43/292534363/292534363-1-208.mp4?e=ig8euxZM2rNcNbhj7bdVhwdlhzTjhwdVhoNvNC8BqJIzNbfq9rVEuxTEnE8L5F6VnEsSTx0vkX8fqJeYTj_lta53NCM=&uipk=5&nbs=1&deadline=1612454039&gen=playurl&os=hwbv&oi=978800370&trid=4b04241507e24502bffbe743bcbd4026T&platform=html5&upsig=3f33c465cbee49e746ad553fb001e918&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,platform&mid=524602686&orderid=0,1&logo=80000000"/>
+            </video>
+        </div>
+        <div id="bm" onclick="show();">点击报名</div>
+    </div>
+    <div id="table">
+        <div id="f">这里放报名的</div>
+        <div id="back" onclick="hiden();">收起此表</div>
+    </div>
+
+    <script>
+        function show() {
+            document.getElementById("table").style.top = "5vh";
+        }
+        function hiden() {
+            document.getElementById("table").style.top = "-90vh";
+        }
+        var video = document.getElementById("v");
+        window.onload = function() {
+            setTimeout("video.muted = false",5500);
+            video.play();       
+        }
+    </script>
+</body>
+</html>
