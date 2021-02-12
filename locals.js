@@ -58,7 +58,7 @@ I18N.zh = {
             "Business": "商业",
             "Pricing": "定价",
             "Support": "支持",
-            "Sign in": "登录",
+            "Sign in": "登**录",
             "Sign up": "注册",
             "Team": "团队",
 
