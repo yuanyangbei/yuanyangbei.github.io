@@ -53,14 +53,16 @@ I18N.zh = {
     "pubilc": { // 公共区域翻译
         "static": { // 静态翻译
             // 未登录部分
+            "Why GitHub?": "为什么选择Github",
+            "Team": "团队",
+            "Enterprise": "企业",
             "Personal": "个人",
             "Open source": "开源",
             "Business": "商业",
             "Pricing": "定价",
             "Support": "支持",
-            "Sign in": "登**录",
+            "Sign in": "登录",
             "Sign up": "注册",
-            "Team": "团队",
 
             "Search GitHub": "GitHub 一下，你就知道",
             "This repository": "当前仓库",
