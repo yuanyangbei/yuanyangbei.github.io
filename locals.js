@@ -63,8 +63,9 @@ I18N.zh = {
             "Support": "支持",
             "Sign in": "登录",
             "Sign up": "注册",
+            "Email address": "邮箱地址",
 
-            "Search GitHub": "GitHub 一下，你就知道",
+            "Search GitHub": "GitHub搜索",
             "This repository": "当前仓库",
             "Search": "搜索",
 
